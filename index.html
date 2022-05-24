@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"
+        integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR"
+        crossorigin="anonymous"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <h3>EXPENSE TRACKER</h3>
+                <div class="card-panel ">
+                    <div class="input-field">
+                        <input placeholder="please Enter Your Budget" type="number" id="budget">
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="calculate">calculate
+                    </button>
+                </div>
+                <div class="card-panel ">
+                    <input type="text" id="expenseId">
+                    <div class="input-field">
+                        <input placeholder="please Enter Your Expense" type="text" id="expense">
+                    </div>
+
+                    <div class="input-field">
+                        <input placeholder="please Enter Your Expense Amount" type="number" id="amount">
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="add_expense">add
+                        Expense
+                    </button>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="row">
+                    <div class="col s4 center">
+                        <h5>BUDGET</h5>
+                        <i class="fa-solid fa-money-bill-1 medium blue-text"></i>
+                        <h6 id="budget-resume" style="color: green;">0 CFA</h6>
+                    </div>
+                    <div class="col s4 center">
+                        <h5>EXPENSES</h5>
+                        <i class="fa-solid fa-credit-card medium blue-text"></i>
+                        <h6><span id="expense-resume" style="color: red;">0</span> </h6>
+                    </div>
+                    <div class="col s4 center">
+                        <h5>BALANCE</h5>
+                        <i class="fa-solid fa-dollar-sign medium blue-text"></i>
+                        <h6><span id="balance" style="color: black;">0</span> CFA</h6>
+                    </div>
+                </div>
+                <div class="row" id="inventaire">
+                    <div class="row effacer" id="depense1">
+                        <div id="title-cell" class="col s4 center">
+                            <h5>Expense Title</h5>
+                        </div>
+                        <div id="value-cell" class="col s4 center">
+                            <h5>Expense Value</h5>
+                        </div>
+                        <div id="edit-cell" class="col s4 center">
+                            <h5>.</h5>
+                        </div>
+                    </div>
+                    <div id="depInventaire"></div>
+                    <!-- <div id="depense2" class="row">
+                        <div class="col s4 center">lait</div>
+                        <div class="col s4 center">2000</div>
+                        <div class="col s4 center">
+                            <i class="material-icons">edit</i>
+                            <i class="material-icons">delete</i>
+                        </div>
+                    </div> -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
