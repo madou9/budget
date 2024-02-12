@@ -24,7 +24,7 @@ function calculateBudget() {
 }
 
 function updateBudget() {
-    budgetResume.textContent = `${totalBudget} CFA`;
+    budgetResume.textContent = `${totalBudget} Euro`;
     updateBalance();
 }
 
@@ -64,7 +64,7 @@ function updateExpenses() {
         expenseHTML += `
             <div class="row" id="expense-${index}">
                 <div class="col s4 center">${expense.name}</div>
-                <div class="col s4 center">${expense.price} CFA</div>
+                <div class="col s4 center">${expense.price} Euro</div>
                 <div class="col s4 center">
                     <button class="btn-edit" onclick="editExpense(${index})"><i class="material-icons">edit</i></button>
                     <button class="btn-delete" onclick="deleteExpense(${index})"><i class="material-icons">delete</i></button>
@@ -72,8 +72,8 @@ function updateExpenses() {
             </div>
         `;
     });
-    expenseResume.textContent = `${totalExpense} CFA`;
-    balance.textContent = `${totalBudget - totalExpense} CFA`;
+    expenseResume.textContent = `${totalExpense} Euro`;
+    balance.textContent = `${totalBudget - totalExpense} Euro`;
     inventory.innerHTML = expenseHTML;
     expenseInput.value = amountInput.value = expenseId.value = "";
 }
